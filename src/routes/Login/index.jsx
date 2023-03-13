@@ -1,6 +1,21 @@
+import { MainWindow } from "./styles"
+import mainicon from "../../assets/mainicon.svg"
+
+
 const Login = () => {
     return (
-      <h1>Login</h1>
+      <MainWindow>
+
+        <img src={mainicon}></img>
+
+        <div className="inputContainer">
+
+          <input placeholder="Usuário" ></input>
+          <input  placeholder="Senha"></input>
+
+          <button>Login</button>
+        </div>
+      </MainWindow>
     );
   };
   
