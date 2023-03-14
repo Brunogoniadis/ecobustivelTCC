@@ -16,7 +16,7 @@ const Login = () => {
           <button>Login</button>
         </div>
       </MainWindow>
-    );
+    )
   };
   
 export default Login;

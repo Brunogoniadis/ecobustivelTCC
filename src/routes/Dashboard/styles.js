@@ -28,4 +28,10 @@ export const MainWindow = styled.main`
 
         padding: 5%;
     }
+    .MapDiv{
+        height: 250px;
+        width: 100%;
+
+        background-color: red;
+    }
 `
