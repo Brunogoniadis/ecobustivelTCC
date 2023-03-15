@@ -28,23 +28,28 @@ export const MainWindow = styled.main`
 
         padding: 5%;
     }
+    .SliderBackground{
+        color: white;
+        height: 60px;
+        width: 100%;
+    }
     .MapDiv{
         height: 260px;
         width: 100%;
     }
     .TableInfo{
         padding: 4%;
-        height: 15vh;
+        height: 5vh;
+
         width: 100%;
         display: grid;
         grid-template-columns: 40% 20% 20% 20%;
-        grid-template-rows: 33% 33% 33% ;
-        row-gap:1px;
+        
         vertical-align: middle;
         p{
             color: #fff;
             font-weight: normal;
-            border: 1px solid black;
+            border: 1px solid white;
             font-size: 12px;
         }
     }
