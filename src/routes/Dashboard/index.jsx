@@ -15,6 +15,11 @@ const Dashboard = () => {
     { name: "Posto Barreira's ", location: { lat: -22.8382, lng: -43.0672 } ,gasolinaValue :21.67, alcoolValue: 13.23, gnvValue: 4.34, id:2},
     { name: "Posto Ipiranga ", location:   { lat: -22.8351, lng: -43.0607 } ,gasolinaValue :20.76, alcoolValue: 13.45, gnvValue: 4.12, id:3},
   ]);
+  const [zoom, setZoom] = useState(13);
+
+  function handleZoomChange({ x }) {
+    setZoom(13 + x); // Adicione o valor do slider ao zoom atual (13)
+  }
 
   function renderGasStations() {
     const renderedGasStations = [];
@@ -51,7 +56,9 @@ const Dashboard = () => {
     mapTypeControl: false,
     mapTypeId: 'roadmap',
     streetViewControl: false,
-    fullscreenControl: false
+    fullscreenControl: false,
+    zoomControl: false
+
   };
   return (
     <MainWindow>
@@ -65,16 +72,21 @@ const Dashboard = () => {
         <p>Os postos de gasolina seram mostrados conforme o limite escolhido</p>
 
         <div className="SliderBackground">
-          <Slider
-              styles={{
-                track: { backgroundColor: "var(--color-text)" },
-                active: { backgroundColor: 'var(--color-border)' },
-              }}
-              axis="x" x={state.x} onChange={({ x }) => setState(state => ({ ...state, x }))} xmax={10}
-          />
-
-          <p>{state.x} km</p>
-        </div>
+        <Slider
+          styles={{
+            track: { backgroundColor: "var(--color-text)" },
+            active: { backgroundColor: 'var(--color-border)' },
+          }}
+          axis="x"
+          x={state.x}
+          onChange={({ x }) => {
+            setState(state => ({ ...state, x }));
+            handleZoomChange({ x });
+          }}
+          xmax={10}
+        />
+        <p>{state.x} km</p>
+      </div>
 
 
 
@@ -85,12 +97,18 @@ const Dashboard = () => {
               mapContainerStyle={{ width: '100%', height: '100%' }}
               center={{ lat: location.lat, lng: location.lng }}
               options={options}
-              zoom={13}
+              zoom={zoom}
+
             >
               {gasStations.map((gasStation, index) => (
                 <Marker
+                
                   key={index}
                   position={gasStation.location}
+                  label={{
+                    text: gasStation.name,
+                    fontWeight: "bold",
+                  }}
                 />
               ))}
             </GoogleMap>
