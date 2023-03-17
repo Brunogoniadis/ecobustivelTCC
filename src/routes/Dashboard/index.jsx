@@ -5,11 +5,14 @@ import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 const Dashboard = () => {
 
+
+  
+
+
   const [state, setState] = useState({ x: 1 });
-
-
-
   const [location, setLocation] = useState({ lat: null, lng: null });
+
+
   const [gasStations, setGasStations] = useState([
     { name: "Posto Planetário ", location: { lat: -22.8429, lng: -43.0744 } ,gasolinaValue :22.90, alcoolValue: 14.12, gnvValue: 5.43, id:1},
     { name: "Posto Barreira's ", location: { lat: -22.8382, lng: -43.0672 } ,gasolinaValue :21.67, alcoolValue: 13.23, gnvValue: 4.34, id:2},
