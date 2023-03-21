@@ -14,6 +14,27 @@ export const MainWindow = styled.main`
 
     color: black;
 
+    .stationName{
+            height: 65%;
+            width: 90%;
+            border-radius: 5px;
+            border: 1px solid;
+            padding: 15px;
+    }
+    .saveStation{
+        width: 50%;
+        height: 100%;
+    }
+    .price{
+            height: 65%;
+            width: 30%;
+            border-radius: 5px;
+            border: 1px solid;
+            padding: 15px;
+    }
+    
+
+
     .Topbar{
         color: white;
         text-align: center;
@@ -28,6 +49,17 @@ export const MainWindow = styled.main`
 
         padding: 5%;
     }
+
+    .InputContainer{
+        height: 50%;
+        width: 100%;
+        padding: 2%;
+
+        display: flex;
+
+        flex-direction: row;
+    }
+
     .SliderBackground{
         color: white;
         height: 60px;

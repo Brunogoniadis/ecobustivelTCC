@@ -17,7 +17,29 @@ export const MainWindow = styled.main`
     .Topbar{
         color: white;
         text-align: center;
-    
+        display: flex;
+        width: 100%;
+
+        flex-direction: row;
+
+
+        justify-content: space-between;
+
+        padding: 10px;
+
+        .cadastro{
+            width: 80px;
+            height: 30px;
+            background-color: #C8C8C8;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+            border-radius: 4px;
+            color: black;
+        }
     }
 
     .TitleText{
@@ -46,7 +68,7 @@ export const MainWindow = styled.main`
     }
     .TableInfo{
         padding: 4%;
-        height: 5vh;
+        height: 4vh;
 
         width: 100%;
         display: grid;

@@ -2,6 +2,7 @@ import { MainWindow } from "./styles"
 import Slider from 'react-input-slider';
 import React, { useState, useEffect } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
 
@@ -67,6 +68,7 @@ const Dashboard = () => {
     <MainWindow>
       <div className="Topbar">
         <p>ecobustivelTCC</p>
+        <Link className="cadastro" >Cadastrar</Link>
       </div>
 
       <div className="TitleText">
