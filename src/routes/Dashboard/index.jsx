@@ -34,9 +34,9 @@ const Dashboard = () => {
 
         <div key={gasStation.id} className="TableInfo">
           <p className="gasStation">{gasStation.name}</p>
-          <p className="gasolinaValue">{gasStation.gasolinaValue}</p>
-          <p className="alcoolValue">{gasStation.alcoolValue}</p>
-          <p className="gnvValue">{gasStation.gnvValue}</p>
+          <p className="gasolinaValue">R$ {gasStation.gasolinaValue}</p>
+          <p className="alcoolValue">R$ {gasStation.alcoolValue}</p>
+          <p className="gnvValue">R$ {gasStation.gnvValue}</p>
         </div>
       )
 
