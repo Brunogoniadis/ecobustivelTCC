@@ -73,12 +73,33 @@ export const MainWindow = styled.main`
         width: 100%;
         display: grid;
         grid-template-columns: 40% 20% 20% 20%;
-        
         vertical-align: middle;
         p{
             color: #fff;
             font-weight: normal;
             border: 1px solid white;
+            font-size: 12px;
+        }
+    }
+    .TableContainer{
+
+        margin: -0.6vw;
+    }
+    .TableInfoName{
+        padding: 4%;
+        height: 4vh;
+
+        width: 100%;
+        display: grid;
+        grid-template-columns: 40% 20% 20% 20%;
+        
+        vertical-align: middle;
+        margin-bottom: -1vw;
+        p{
+            color: #fff;
+            font-weight: normal;
+            
+        border-color: transparent;
             font-size: 12px;
         }
     }
